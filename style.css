@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2family=DM+Serif+Display:ital@1&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  
+  /*Primary and Secondary Colors as variables
+  In case I want to change later */
+  --primary-glow: #FAF;
+  --secondary-glow: #0FF;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  background-image: url("background.jpg");
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.primaryGlow {
+  text-shadow:
+    0 0 7px #FFF,
+    0 0 14px #FFF,
+    0 0 21px var(--primary-glow),
+    0 0 42px var(--primary-glow);
+}
+
+.primaryColor {
+  color: var(--primary-glow);
+}
+
+.secondaryColor {
+  color: var(--secondary-glow);
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 5%;
+}
+
+#navbar li {
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+
+#navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Using secondary glow here */
+#navbar h1:hover, li:hover, .currentPage {
+  text-shadow:
+    0 0 7px #FFF,
+    0 0 10px #FFF,
+    0 0 21px var(--secondary-glow),
+    0 0 42px var(--secondary-glow);
+}
+
+.currentPage {
+  text-decoration: underline;
+}
+
+#body {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  padding: 2% 10%;
+}
+
+#name {
+  font-size: 8vw;
+  animation: flicker 1.5s infinite alternate;
+}
+
+#name:hover {
+  animation: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px var(--primary-glow),
+      0 0 80px var(--primary-glow),
+      0 0 90px var(--primary-glow),
+      0 0 100px var(--primary-glow),
+      0 0 150px var(--primary-glow);
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
