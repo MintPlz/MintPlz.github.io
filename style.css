@@ -50,13 +50,12 @@ html, body {
   padding: 20px;
 }
 
-#navbar a {
+a {
   color: inherit;
   text-decoration: none;
 }
 
-/* Using secondary glow here */
-#navbar h1:hover, li:hover, .currentPage {
+a:hover, .currentPage {
   text-shadow:
     0 0 7px #FFF,
     0 0 10px #FFF,
@@ -74,38 +73,30 @@ html, body {
   flex-direction: column;
   row-gap: 1em;
   padding: 2% 10%;
+  overflow-y: auto;
 }
 
-#name {
-  font-size: 8vw;
-  animation: flicker 1.5s infinite alternate;
+img {
+  height: 64px;
+  width: 64px;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem var(--primary-glow),
+              0 0 0.8rem var(--primary-glow),
+              0 0 2.8rem var(--primary-glow),
+              inset 0 0 1.3rem var(--primary-glow);
 }
 
-#name:hover {
-  animation: none;
+#powerDemo {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
 }
 
 footer {
   display: flex;
   justify-content: center;
-}
-
-/* Flickering animation */
-@keyframes flicker {
-    
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-      text-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 40px var(--primary-glow),
-      0 0 80px var(--primary-glow),
-      0 0 90px var(--primary-glow),
-      0 0 100px var(--primary-glow),
-      0 0 150px var(--primary-glow);
-  }
-  
-  20%, 24%, 55% {        
-      text-shadow: none;
-  }    
 }
