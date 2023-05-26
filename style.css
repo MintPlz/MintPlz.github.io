@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
   
   /*Primary and Secondary Colors as variables
   In case I want to change later */
@@ -14,7 +15,6 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: black;
-  /*background-image: url("background.jpg");*/
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -26,6 +26,18 @@ html, body {
     0 0 14px #FFF,
     0 0 21px var(--primary-glow),
     0 0 42px var(--primary-glow);
+}
+
+.primaryGlowBox {
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem var(--primary-glow),
+              0 0 0.8rem var(--primary-glow),
+              0 0 2.8rem var(--primary-glow),
+              inset 0 0 1.3rem var(--primary-glow);
 }
 
 .primaryColor {
@@ -76,21 +88,13 @@ a:hover, .currentPage {
   overflow-y: auto;
 }
 
+h1:not(:first-child) {
+  margin-top: 1.5em;
+}
+
 #powerButton {
   height: 64px;
   width: 64px;
-}
-
-img {
-  border: 0.2rem solid #fff;
-  border-radius: 2rem;
-  padding: 0.4em;
-  box-shadow: 0 0 .2rem #fff,
-              0 0 .2rem #fff,
-              0 0 2rem var(--primary-glow),
-              0 0 0.8rem var(--primary-glow),
-              0 0 2.8rem var(--primary-glow),
-              inset 0 0 1.3rem var(--primary-glow);
 }
 
 #powerDemo {
@@ -98,6 +102,48 @@ img {
   display: flex;
   align-items: center;
   column-gap: 20px;
+}
+
+#contactform {
+  box-sizing: border-box;
+  padding: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-50 {
+  flex: 50%;
+  padding: 0 16px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background: transparent;
+  color: var(--primary-glow);
+  border: 1px solid var(--primary-glow);
+  box-shadow: 0 0 5px var(--primary-glow), 0 0 5px var(--primary-glow) inset;
+}
+
+input[type="submit"]:hover {
+  color: var(--secondary-glow);
+  border: 1px solid var(--secondary-glow);
+  box-shadow: inset 0 0 10px var(--secondary-glow), 0 0 20px var(--secondary-glow) inset, 0 0 20px var(--secondary-glow) inset;
 }
 
 footer {

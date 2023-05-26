@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Contact Nikki</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!--Navigation bar. Links to 4 different HTML pages-->
+  <header class="primaryGlow" id="navbar">
+    <h1>Nikki ~<3</h1>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/projects.html">Projects</a></li>
+      <li><a href="/qualifications.html">Qualifications</a></li>
+      <li class="currentPage"><a href="/contact.html">Contact Me</a></li>
+    </ul>
+  </header>
+  <!--Actual body paragraphs-->
+  <div id="body">
+    <form class="primaryGlowBox" id="contactform" target="_blank" action="https://formsubmit.co/63c8dedd8b8ece5eb9cd265a53d47a4a" method="POST">
+      <div class="row">
+        <div class="col-50">
+          <h2 class="primaryGlow">First Name</h2>
+          <input type="text" id="fname" name="firstname" placeholder="Please enter your first name.">
+        </div>
+        <div class="col-50">
+          <h2 class="primaryGlow">Last Name</h2>
+          <input type="text" id="lname" name="lastname" placeholder="Please enter your last name.">
+        </div>
+      </div>
+      <h2 class="primaryGlow">Email</h2>
+      <input type="email" id="email" name="email" placeholder="Please enter your email.">
+      <h2 class="primaryGlow">Message</h2>
+      <textarea type="text" id="message" name="message" placeholder="Write something..."></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <footer class="primaryGlow">
+    Created by: Nikki Watt
+  </footer>
+</body>
+
+</html>
